@@ -6,6 +6,6 @@ Description: This plugin enables you to supply lots of data for testing your Wor
 Version: 0.1alpha
 Author: Apricog, WPMonks, gricso and gezope
 Author URI: http://wpmonks.com
-License: MIT licence
+License: GPL licence
 */
 ?>
