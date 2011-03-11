@@ -58,3 +58,29 @@ function testdatasupplier_init(){
 }
 
 ?>
+
+<?php
+//add_option();
+//update_option();
+//delete_option();
+?>
+
+<?php
+//creating a top-level menu
+
+$page_title_for_toplevel_menu = 'TestDataSupplier';
+$menu_title_for_toplevel_menu = 'TestDataSupplier';
+$capability_for_TDS = 'administrator';
+$function_for_TDS = ;
+$handle = '__FILE__';
+//$icon_for_TDS;
+
+add_menu_page($page_title_for_toplevel_menu,
+              $menu_title_for_toplevel_menu,
+              $capability_for_TDS,
+              $function_for_TDS,
+              $handle
+              //$icon_for_TDS,
+               );
+
+?>
