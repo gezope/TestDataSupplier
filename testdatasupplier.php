@@ -76,7 +76,9 @@ function tds_create_menu () {
   $page_title_for_toplevel_menu = 'TestDataSupplier';
   $menu_title_for_toplevel_menu = 'TestDataSupplier';
   $capability_for_TDS = 'administrator';
-  $function_for_TDS = '<h1>this is the function probably</h1>';  //need to be fixed
+  function function_for_TDS() {
+    //will be implemented
+  }
   $handle = '__FILE__';
   //$icon_for_TDS;
 
@@ -84,11 +86,11 @@ function tds_create_menu () {
   add_menu_page($page_title_for_toplevel_menu,
                 $menu_title_for_toplevel_menu,
                 $capability_for_TDS,
-                $function_for_TDS,
+                'function_for_TDS',
                 $handle
                 //$icon_for_TDS,
                  );
-
+/*
   //create submenu items
   add_submenu_page(__FILE__, 
                    'Upload Test Users', 
@@ -124,7 +126,7 @@ function tds_create_menu () {
                    'administrator', 
                    __FILE__.'_upload_links', 
                    'tds_upload_links');
-
+*/
 
 }
 
