@@ -76,7 +76,7 @@ function tds_create_menu () {
   $page_title_for_toplevel_menu = 'TestDataSupplier';
   $menu_title_for_toplevel_menu = 'TestDataSupplier';
   $capability_for_TDS = 'administrator';
-  $function_for_TDS = ;  //need to be fixed
+  $function_for_TDS = '<h1>this is the function probably</h1>';  //need to be fixed
   $handle = '__FILE__';
   //$icon_for_TDS;
 
