@@ -90,7 +90,41 @@ function tds_create_menu () {
                  );
 
   //create submenu items
-  add_submenu_page();
+  add_submenu_page(__FILE__, 
+                   'Upload Test Users', 
+                   'Upload Users', 
+                   'administrator', 
+                   __FILE__.'_upload_users', 
+                   'tds_upload_users');
+
+  add_submenu_page(__FILE__, 
+                   'Upload Test Posts', 
+                   'Upload Posts', 
+                   'administrator', 
+                   __FILE__.'_upload_posts', 
+                   'tds_upload_posts');
+
+  add_submenu_page(__FILE__, 
+                   'Upload Test Pages', 
+                   'Upload Pages', 
+                   'administrator', 
+                   __FILE__.'_upload_pages', 
+                   'tds_upload_pages');
+
+  add_submenu_page(__FILE__, 
+                   'Upload Test Comments', 
+                   'Upload Comments', 
+                   'administrator', 
+                   __FILE__.'_upload_comments', 
+                   'tds_upload_comments');
+
+  add_submenu_page(__FILE__, 
+                   'Upload Test Links', 
+                   'Upload Links', 
+                   'administrator', 
+                   __FILE__.'_upload_links', 
+                   'tds_upload_links');
+
 
 }
 
