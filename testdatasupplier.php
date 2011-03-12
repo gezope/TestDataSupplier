@@ -9,7 +9,6 @@ Author URI: http://wpmonks.com
 License: GPL2.0 licence
 */
 ?>
-
 <?php
 /*  Copyright 2011  Apricog  (email : admin@apricog.com, gricso@wpmonks.com, gezope@wpmonks.com)
 
@@ -27,48 +26,41 @@ License: GPL2.0 licence
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 ?>
-
 <?php
 
 register_activation_hook(__FILE__,'testdatasupplier_install');
 
 function testdatasupplier_install () {
-  //will be executed when installing the plugin
+  tds_create_menu ();
 }
 
 ?>
-
 <?php
-
+/*
 register_deactivation_hook(__FILE__,'testdatasupplier_uninstall');
 
 function testdatasupplier_uninstall() {
   //will be executed when uninstalling the plugin
 }
-
+*/
 ?>
-
 <?php
-
+/*
 add_action('init', 'testdatasupplier_init');
 
 function testdatasupplier_init(){
   //loading translations
   load_plugin_textdomain('testdatasupplier', false, plugin_basename(dirname(__FILE__).'/localization'));
 }
-
+*/
 ?>
-
 <?php
 //add_option();
 //update_option();
 //delete_option();
 ?>
-
 <?php
 //creating a top-level menu
-
-add_action('admin_menu', 'tds_create_menu');
 
 function tds_create_menu () {
 
@@ -77,20 +69,19 @@ function tds_create_menu () {
   $menu_title_for_toplevel_menu = 'TestDataSupplier';
   $capability_for_TDS = 'administrator';
   function function_for_TDS() {
-    return '<h1>This solves the function issue probably! :)</h1>';
+    include('functions_of_tds.php');
   }
-  $handle = '__FILE__';
   //$icon_for_TDS;
 
   //create main menu
   add_menu_page($page_title_for_toplevel_menu,
                 $menu_title_for_toplevel_menu,
                 $capability_for_TDS,
-                'function_for_TDS',
-                $handle
+                __FILE__,
+                'function_for_TDS'
                 //$icon_for_TDS,
                  );
-/*
+
   //create submenu items
   add_submenu_page(__FILE__, 
                    'Upload Test Users', 
@@ -126,14 +117,10 @@ function tds_create_menu () {
                    'administrator', 
                    __FILE__.'_upload_links', 
                    'tds_upload_links');
-*/
+
 
 }
 
-?>
-
-<?php
-
-
+add_action('admin_menu', 'tds_create_menu');
 
 ?>
